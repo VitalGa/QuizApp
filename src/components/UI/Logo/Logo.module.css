@@ -1,0 +1,22 @@
+.wrapper {
+  width: 178px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: calc(var(--gap-small) - 6px);
+}
+
+.image {
+  width: 178px;
+  height: 48px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 146px;
+    height: 40px;
+  }
+}

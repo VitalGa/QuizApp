@@ -1,0 +1,153 @@
+.resultPageWrapper {
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  color: #125365;
+  gap: calc(var(--gap-large) + 2px);
+}
+
+@media (max-width: 1279px) {
+  .resultPageWrapper {
+    gap: 32px;
+    padding: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .resultPageWrapper {
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+.resultTextWrapper > p:first-child,
+.resultTextWrapper > p:last-child {
+  font-weight: var(--medium-weight);
+  font-size: var(--large-font-size);
+  line-height: var(--large-line-height);
+}
+
+@media (max-width: 768px) {
+  .resultTextWrapper > p:first-child,
+  .resultTextWrapper > p:last-child {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+}
+
+.resultHeading {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: var(--bold-weight);
+}
+
+@media (max-width: 768px) {
+  .resultHeading {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+}
+
+.resultIcon {
+  transform: translateY(-7px);
+  width: 196px;
+  height: 196px;
+  object-fit: cover;
+  object-position: center;
+  clip-path: inset(3% 0 0% 0);
+}
+
+@media (max-width: 1279px) {
+  .resultIcon {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .resultIcon {
+    transform: translateY(-5px);
+    width: 163px;
+    height: 162px;
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--gap-medium) - 4px);
+}
+
+@media (max-width: 768px) {
+  .result {
+    gap: 8px;
+  }
+}
+
+.highlight {
+  color: #2a8f55;
+  font-weight: var(--bold-weight);
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .highlight {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+}
+
+.errorHighlight {
+  color: #df4c25;
+  font-weight: var(--bold-weight);
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .errorHighlight {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.resultMessage {
+  max-width: 475px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.mainMessage {
+  font-weight: var(--medium-weight);
+}
+
+@media (max-width: 1279px) {
+  .resultMessage {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resultMessage {
+    max-width: 310px;
+  }
+}

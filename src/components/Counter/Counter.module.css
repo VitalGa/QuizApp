@@ -1,0 +1,142 @@
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-medium);
+}
+
+.counterItemWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 68px;
+  border-radius: 10px;
+  border: 4px solid #125365;
+  transition: border-color 0.2s ease;
+}
+
+.counterItemWrapper:hover {
+  border-color: #ff9c46;
+}
+
+.counterItemWrapper:hover .counterItem {
+  color: #ff9c46;
+}
+
+.counterItemWrapper:focus-within {
+  border-color: #ff9c46;
+}
+
+.counterItem {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: center;
+  color: #125365;
+  border: none;
+  background: none;
+  width: 100%;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  transition: color 0.2s ease, caret-color 0.2s ease;
+  cursor: pointer;
+}
+
+.counterItem:focus {
+  caret-color: #ff9c46;
+  color: #ff9c46;
+}
+
+.counterItem::-webkit-outer-spin-button,
+.counterItem::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.plusWrapper,
+.minusWrapper {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  width: 52px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.plusIcon,
+.minusIcon {
+  color: #125365;
+  transition: color 0.3s ease;
+  background: transparent;
+  pointer-events: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.plusIcon:hover,
+.minusIcon:hover {
+  background: transparent;
+  color: #ff9c46;
+}
+
+.plusIcon.disabled,
+.minusIcon.disabled {
+  color: #81a1a9;
+  cursor: default;
+}
+
+.plusWrapper:focus-visible,
+.minusWrapper:focus-visible {
+  outline: 2px solid #ff9c46;
+  outline-offset: 2px;
+}
+
+.plusWrapper:focus-visible .plusIcon,
+.minusWrapper:focus-visible .minusIcon {
+  color: #ff9c46;
+}
+
+.plusWrapper,
+.minusWrapper {
+  &:hover,
+  &:active {
+    outline: none;
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .counter {
+    gap: 6px;
+  }
+
+  .counterItemWrapper {
+    width: 84px;
+    height: 47px;
+    border-radius: 12px;
+    border: 3px solid #125365;
+  }
+
+  .counterItem {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+
+  .plusIcon,
+  .minusIcon {
+    width: 33px;
+    height: 33px;
+    border: 2px;
+  }
+}

@@ -1,0 +1,41 @@
+:root {
+  --text-color: #125365;
+  --button-disabled-text-color: #f1f1ef;
+  --button-disabled-background-color: #edd0b6;
+  --button-disabled-enter-color: #81a1a9;
+  --button-default-text-color: #f1f1ef;
+  --button-default-background-color: #ff9c46;
+  --button-default-enter-color: #125365;
+
+  --medium-font-size: 20px;
+  --large-font-size: 28px;
+  --regular-line-height: 24px;
+  --large-line-height: 32px;
+
+  --medium-weight: 500;
+  --bold-weight: 700;
+
+  --padding-small: 10px;
+  --padding-medium: 20px;
+  --padding-large: 30px;
+
+  --gap-small: 10px;
+  --gap-medium: 20px;
+  --gap-large: 30px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  --border-radius: 10px;
+  --border-radius-small: 5px;
+
+  --mobile-breakpoint: 375px;
+  --mobile-max-width: 767px; /* Максимальная ширина для мобильных стилей */
+  --tablet-breakpoint: 768px; /* Мобильные стили применяются до 767px включительно, планшетные от 768px */
+  --desktop-breakpoint: 1280px;
+}

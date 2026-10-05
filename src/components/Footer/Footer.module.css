@@ -1,0 +1,39 @@
+.footer {
+  width: 100%;
+  max-width: 590px;
+  display: flex;
+}
+
+.copyright {
+  color: #f1f1ef;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.copyright a {
+  color: #f1f1ef;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.copyright a:focus,
+.copyright a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    max-width: 343px;
+  }
+
+  .copyright {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+  }
+}

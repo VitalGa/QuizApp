@@ -1,0 +1,30 @@
+.answersWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap-medium) - 4px);
+  width: 100%;
+  min-height: 42px;
+}
+
+.answerNumber {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: var(--medium-font-size);
+  font-weight: var(--bold-weight);
+  line-height: var(--regular-line-height);
+  text-align: center;
+  color: var(--text-color);
+  list-style-type: none;
+  counter-reset: answer-counter;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 192px;
+}
+
+@media (max-width: 768px) {
+  .answerNumber {
+    gap: 8px;
+  }
+}

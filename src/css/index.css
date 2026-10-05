@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #242424;
+  background-attachment: fixed;
+}
+
+/* Глобальные стили для всех кнопок - предотвращаем стандартную рамку при клике */
+button {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Глобальные стили для всех label с input внутри - предотвращаем стандартную рамку при клике */
+label {
+  outline: none;
+}
+
+label:active {
+  outline: none;
+}
+
+label:focus:not(:focus-visible) {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+figure,
+main,
+section,
+article,
+aside,
+details,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+progress,
+summary,
+time {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+  }
+
+  body {
+    background-color: #ffffff;
+  }
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 10px;
+  color: #125365;
+}
+
+.mainHeading {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: var(--bold-weight);
+  text-align: center;
+}
+
+/* Вспомогательный класс для скрытого текста (для скринридеров) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

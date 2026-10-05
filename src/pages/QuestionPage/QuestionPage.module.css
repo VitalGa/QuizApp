@@ -1,0 +1,184 @@
+.questionPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  gap: calc(var(--gap-large) + 2px);
+  border-radius: 10px;
+  color: #125365;
+}
+
+.answer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  gap: calc(var(--gap-small) + 2px);
+  border-radius: 10px;
+  border: 4px solid var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+  padding-left: 40px;
+}
+
+.answer:hover {
+  background-color: rgba(18, 83, 101, 0.1);
+}
+
+.answer::before {
+  counter-increment: answer-counter;
+  content: counter(answer-counter);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--medium-font-size);
+  font-weight: var(--bold-weight);
+  color: var(--text-color);
+}
+
+.answerText {
+  font-size: var(--medium-font-size);
+  font-weight: var(--medium-weight);
+  line-height: var(--regular-line-height);
+  color: var(--text-color);
+  width: 100%;
+  padding-left: 3px;
+  letter-spacing: 0.7px;
+}
+
+.questionPageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  gap: calc(var(--gap-large) + 2px);
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .questionPageWrapper {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
+.countQuestionAndButton {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.countQuestion {
+  font-size: var(--medium-font-size);
+  font-weight: var(--bold-weight);
+  line-height: var(--regular-line-height);
+  margin-top: -23px;
+}
+
+@media (max-width: 1279px) {
+  .countQuestion {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .countQuestion {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    padding-right: 10px;
+  }
+}
+.deleteButton {
+  color: #f1f1ef;
+  position: absolute;
+  top: -60px;
+  right: -1px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .deleteButton {
+    width: 26px;
+    height: 26px;
+    top: -42px;
+    right: -1px;
+  }
+}
+
+.deleteButton:focus-visible {
+  outline: 3px solid var(--button-default-text-color);
+  outline-offset: 0;
+}
+
+.deleteButtonIcon {
+  width: 32px;
+  height: 32px;
+  color: #f1f1ef;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteButtonIcon:hover {
+  color: #125365;
+}
+
+@media (max-width: 768px) {
+  .deleteButtonIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loaderWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preloader {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
