@@ -5,6 +5,11 @@ import path from 'path';
 export default defineConfig({
     base: '/QuizApp/',
     plugins: [react()],
+    build: {
+        // SVG <use> needs a file URL with a symbol fragment, not a data URL.
+        assetsInlineLimit: (file) =>
+            file.endsWith('/iconsSprite/icons.svg') ? false : undefined,
+    },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
